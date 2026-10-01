@@ -1,0 +1,14 @@
+{
+  "name": "DineMetric Atlas",
+  "dataColors": [
+    "#CF3448",
+    "#287F72",
+    "#697E8B",
+    "#EAA24D",
+    "#51303C",
+    "#A4ACB9"
+  ],
+  "background": "#F5F6F8",
+  "foreground": "#202631",
+  "tableAccent": "#CF3448"
+}

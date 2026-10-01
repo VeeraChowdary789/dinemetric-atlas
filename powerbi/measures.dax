@@ -1,0 +1,36 @@
+// Create each measure separately. Import cleaned CSV and name the table Restaurants.
+// Set rating/cost to Decimal Number, id/votes/country to Whole Number,
+// and delivery/booking to True/False. Preserve blank cost and rating as null.
+
+Total Restaurants = DISTINCTCOUNT(Restaurants[id])
+
+Rated Restaurants = COUNT(Restaurants[rating])
+
+Average Rating = AVERAGE(Restaurants[rating])
+
+Median Cost for Two =
+VAR MarketCode = SELECTEDVALUE(Restaurants[country])
+RETURN
+    IF(
+        HASONEVALUE(Restaurants[country]) && MarketCode <> 162,
+        MEDIAN(Restaurants[cost]),
+        BLANK()
+    )
+
+Online Delivery % =
+DIVIDE(
+    CALCULATE([Total Restaurants], KEEPFILTERS(Restaurants[delivery] = TRUE())),
+    [Total Restaurants]
+)
+
+Table Booking % =
+DIVIDE(
+    CALCULATE([Total Restaurants], KEEPFILTERS(Restaurants[booking] = TRUE())),
+    [Total Restaurants]
+)
+
+Total Votes = SUM(Restaurants[votes])
+
+Unrated Restaurants = [Total Restaurants] - [Rated Restaurants]
+
+Unrated % = DIVIDE([Unrated Restaurants], [Total Restaurants])

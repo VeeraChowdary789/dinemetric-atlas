@@ -1,0 +1,29 @@
+{
+  "sourceRows": 9551,
+  "uniqueRestaurants": 9551,
+  "unrated": 2148,
+  "missingCuisines": 9,
+  "nonPositiveCost": 18,
+  "zeroCoordinates": 497,
+  "encodingAffectedRows": 246,
+  "sourceSHA256": "f1a268f63816fc3e7dad785a0e3e09a17a9db322a199a31446076f6f1906426c",
+  "source": "User-supplied Zomato Restaurant Dataset.csv",
+  "snapshotDate": null,
+  "countries": {
+    "1": "India",
+    "14": "Australia",
+    "30": "Brazil",
+    "37": "Canada",
+    "94": "Indonesia",
+    "148": "New Zealand",
+    "162": "Philippines",
+    "166": "Qatar",
+    "184": "Singapore",
+    "189": "South Africa",
+    "191": "Sri Lanka",
+    "208": "Turkey",
+    "214": "United Arab Emirates",
+    "215": "United Kingdom",
+    "216": "United States"
+  }
+}
